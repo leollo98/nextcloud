@@ -11,5 +11,6 @@ So is possible to use a shared folder and mount it on `/mnt/Vault`
 Comands:
 ```
 wget https://raw.githubusercontent.com/nextcloud/vm/master/nextcloud_install_production.sh
-sudo bash nextcloud_install_production.sh
+chmod +x nextcloud_install_production.sh
+./nextcloud_install_production.sh
 ```
