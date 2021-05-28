@@ -21,6 +21,8 @@ It's the first of two parts that are necessary to finish your customized Nextclo
 # shellcheck source=lib.sh
 source <(curl -sL https://raw.githubusercontent.com/leollo98/nextcloud/main/lib.sh)
 
+NCDATA=/mnt/Vault/ncdata
+
 # Check for flags
 if [ "$1" = "" ]
 then
@@ -251,7 +253,7 @@ or run the automatic script that will choose the available disk automatically."
 $MENU_GUIDE" "$WT_HEIGHT" "$WT_WIDTH" 4 \
 "2 Disks Auto" "(Automatically configured)" \
 "2 Disks Manual" "(Choose by yourself)" \
-"1 Disk" "(Only use one disk /mnt/ncdata - NO ZFS!)" 3>&1 1>&2 2>&3)
+"1 Disk" "(Only use one disk $NCDATA - NO ZFS!)" 3>&1 1>&2 2>&3)
 fi
 
 case "$choice" in
